@@ -3,6 +3,8 @@ package ru.avalon.java.dev.j10.labs;
 import ru.avalon.java.dev.j10.labs.initialization.FibonacciInitializer;
 import ru.avalon.java.dev.j10.labs.initialization.RandomInitializer;
 import ru.avalon.java.dev.j10.labs.sort.BubbleSort;
+import java.util.Arrays;
+import ru.avalon.java.dev.j10.labs.sort.SelectionSort;
 
 public class Main {
 
@@ -23,6 +25,14 @@ public class Main {
         BubbleSort buble = new BubbleSort();
         buble.sort(array);
         
+        System.out.println("Отсортированный пузырьком массив: " + Arrays.toString(array));
+        
+        rand.initialize(array);
+        
+        SelectionSort sel = new SelectionSort();
+        sel.sort(array);
+        
+        System.out.println("Отсортированный выбором массив: " + Arrays.toString(array));
         
         
 	    /*
@@ -39,10 +49,10 @@ public class Main {
 	     * +3. Проинициализировать массив последовательностью
 	     *    случайных чисел в диапазоне от -50 до 50.
 	     *
-	     * 4. Отсортировать массив с использованием
+	     * +4. Отсортировать массив с использованием
 	     *    пузырьковой сортировки.
 	     *
-         * 5. Проинициализировать массив последовательностью
+         * +5. Проинициализировать массив последовательностью
          *    случайных чисел в диапазоне от -50 до 50.
          *
          * 6. Отсортировать массив с использованием

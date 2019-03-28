@@ -17,28 +17,33 @@ public class BubbleSort implements Sort {
     /**
      * {@inheritDoc}
      */
+    
     @Override
     public void sort(int[] array) {
         
         int swap;
+        boolean isSorted = false;
         
-        for (int i = 0; i < array.length - 1; i++){
+        while (!isSorted){
             
-            swap = array[i];
+            isSorted = true;
             
-            for (int j = 0; j < array.length - 1; j++){
+            for (int i = 0; i < array.length-1; i++){
                 
-                if (swap < array[j]) {
+                if (array[i] > array[i+1]) {
                     
-                    array[i] = array[j];
+                    isSorted = false;
                     
-                    array[j] = swap;
+                    swap = array[i];
+                    
+                    array[i] = array[i+1];
+                    
+                    array[i+1] = swap;
                             
                 }
                 
             }
-             System.out.println(array[i]);
-        
+             
         }
         /*
          * TODO(Студент): Реализовать метод sort класса BubbleSort
