@@ -1,10 +1,15 @@
 package ru.avalon.java.dev.j10.labs;
 
+import ru.avalon.java.dev.j10.labs.initialization.FibonacciInitializer;
+
 public class Main {
 
     public static void main(String[] args) {
-        int[] array;
+        int[] array = new int[20];
 
+        int[] Newarray  = new FibonacciInitializer().initialize(array);
+        
+        
 	    /*
 	     * TODO(Студент): Выполнить действия над массивом чисел
 	     *
