@@ -2,6 +2,7 @@ package ru.avalon.java.dev.j10.labs;
 
 import ru.avalon.java.dev.j10.labs.initialization.FibonacciInitializer;
 import ru.avalon.java.dev.j10.labs.initialization.RandomInitializer;
+import ru.avalon.java.dev.j10.labs.sort.BubbleSort;
 
 public class Main {
 
@@ -14,10 +15,13 @@ public class Main {
         
         for (int element : array) summArray += element;
         
-        System.out.println(summArray);
+        System.out.println("Сумма элементов массива: " + summArray);
         
         RandomInitializer rand = new RandomInitializer(-50, 50);
         rand.initialize(array);
+        
+        BubbleSort buble = new BubbleSort();
+        buble.sort(array);
         
         
         
