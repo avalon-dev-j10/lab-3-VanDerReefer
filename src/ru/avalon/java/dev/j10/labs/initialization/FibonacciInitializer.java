@@ -31,11 +31,13 @@ public class FibonacciInitializer implements Initializer {
     
     public void initialize(int[] array) {
         
-        for (int i = 1; i < array.length - 1; i++){
+        array[0] = 1;  // Присвиваем 2 начальных значения
+        array[1] = 1;
+        
+        for (int i = 2; i < array.length - 1; i++){ // Заполняем остальные элементы
             
-            array[i] = i + array[i-1];
+            array[i] = array[i-2] + array[i-1];
             
-            System.out.println(array[i]);
         }
         
         /*
