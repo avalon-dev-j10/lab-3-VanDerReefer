@@ -12,12 +12,41 @@ import ru.avalon.java.dev.j10.labs.Sort;
  *
  * @see <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%BE%D0%BC">Сортировка выбором</a>
  */
+
 public class SelectionSort implements Sort {
 
     /**
      * {@inheritDoc}
      */
+    
+    @Override
     public void sort(int[] array) {
+      
+      int swap;
+      int minimum; 
+        
+      for (int i = 0; i < array.length - 1; i++) {
+
+		minimum = i;
+
+		for (int j = i + 1; j < array.length; j++) {
+
+		    if (array[j] < array[minimum]) {
+
+			minimum = j;
+
+			}
+
+		}
+
+		    swap = array[i];
+
+		    array[i] = array[minimum];
+
+		    array[minimum] = swap;
+
+	}  
+        
         /*
          * TODO(Студент): Реализовать метод sort класса SelectionSort
          */

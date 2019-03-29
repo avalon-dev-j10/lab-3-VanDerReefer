@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs.initialization;
 
+import java.util.Random;
 import ru.avalon.java.dev.j10.labs.Initializer;
 
 /**
@@ -13,17 +14,36 @@ import ru.avalon.java.dev.j10.labs.Initializer;
  * значения, передаётся в конструктор класса при
  * инициализации.
  */
-public class RandomInitializer implements Initializer {
 
+public class RandomInitializer implements Initializer {
+    
+    private final int lowLimit;
+    private final int hiLimit;
+
+    public RandomInitializer(int lowLimit, int hiLimit) {
+        this.lowLimit = lowLimit;
+        this.hiLimit = hiLimit;
+    }
+    
     /**
      * Выполняет инициализацию массива, значениями
      * последовательности случайных чисел.
      *
      * @param array массив, подлежащий инициализации
      */
+    
+    @Override
     public void initialize(int[] array) {
+        
+        for (int i = 0; i < array.length; i++){
+            
+            array[i] = new Random().nextInt(hiLimit-lowLimit) - Math.abs(lowLimit);
+            
+        }
+        
         /*
-         * TODO(Студент): Реализовать метод initialize класса RandomInitializer
-         */
+        * TODO(Студент): Реализовать метод initialize класса RandomInitializer
+        */
     }
+   
 }
