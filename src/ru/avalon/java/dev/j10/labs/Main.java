@@ -5,6 +5,7 @@ import ru.avalon.java.dev.j10.labs.initialization.RandomInitializer;
 import ru.avalon.java.dev.j10.labs.sort.BubbleSort;
 import java.util.Arrays;
 import ru.avalon.java.dev.j10.labs.sort.SelectionSort;
+import ru.avalon.java.dev.j10.labs.sort.ShellSort;
 
 public class Main {
 
@@ -34,8 +35,14 @@ public class Main {
         
         System.out.println("Отсортированный выбором массив: " + Arrays.toString(array));
         
+        rand.initialize(array);
         
-	    /*
+        ShellSort shell = new ShellSort();
+        shell.sort(array);
+        
+        System.out.println("Отсортированный Шеллом массив: " + Arrays.toString(array));
+        
+        	    /*
 	     * TODO(Студент): Выполнить действия над массивом чисел
 	     *
 	     * +0. Создать массив из 20 целых чисел и адресовать
@@ -55,13 +62,13 @@ public class Main {
          * +5. Проинициализировать массив последовательностью
          *    случайных чисел в диапазоне от -50 до 50.
          *
-         * 6. Отсортировать массив с использованием
+         * +6. Отсортировать массив с использованием
          *    сортировки выбором.
          *
-         * 7. Проинициализировать массив последовательностью
+         * +7. Проинициализировать массив последовательностью
          *    случайных чисел в диапазоне от -50 до 50.
          *
-         * 8. Отсортировать массив с использованием
+         * +8. Отсортировать массив с использованием
          *    сортировки Шелла.
 	     */
     }

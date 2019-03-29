@@ -39,13 +39,11 @@ public class RandomInitializer implements Initializer {
             
             array[i] = new Random().nextInt(hiLimit-lowLimit) - Math.abs(lowLimit);
             
-            //System.out.println(array[i]);
         }
         
-        
         /*
-         * TODO(Студент): Реализовать метод initialize класса RandomInitializer
-         */
+        * TODO(Студент): Реализовать метод initialize класса RandomInitializer
+        */
     }
    
 }
